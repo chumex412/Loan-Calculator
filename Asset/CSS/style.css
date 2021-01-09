@@ -1,0 +1,194 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base-font: 1rem;
+  --type-scale: 1.25;
+  --paragragph: calc(var(--base-font) * var(--type-scale));
+  --button: calc(var(--base-font) * var(--type-scale));
+  --h2: calc(var(--button) * var(--type-scale));
+  --h1: calc(var(--h2) * var(--type-scale));
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+  background-color: #f8f9fa;
+}
+
+/* Utilities */
+
+.container {
+  width: 100%;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+.h1 {font-size: var(--h1);}
+
+.h2 {font-size: var(--h2);}
+
+.btn {
+  padding: 1rem 2rem; 
+  width: 100%;
+  font-size: var(--button);
+}
+
+.btn-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+/* Main styling */
+
+header {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.loading, 
+.card-footer {
+  display: none;
+}
+
+.loading{
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.loader {
+  display: block;
+  width: 40%;
+  height: auto;
+  margin: auto;
+}
+
+.card {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  border-top: 1px solid #666;
+  padding: 1.5rem;
+}
+
+form {
+  width: 100%;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 12fr;
+  margin: 1.5rem 0;
+} 
+
+.form-group-last {
+  display: block;
+}
+
+input[type=text],
+input[type=number] {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 1px solid #666;
+  border-left: none;
+}
+
+#periodInput {
+  border-left: 1px solid #666;
+}
+
+.icon {
+  font-size: var(--paragragph);
+  padding: 0.8rem 1.5rem;
+  background-color: #ddd;
+  border: 1px solid #666;
+  border-right: none;
+  text-align: center;
+}
+
+.form-custom-group {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  margin: 1rem 0;
+  font-size: var(--paragragph);
+}
+
+.output-item {
+  padding: 1rem 1.5rem;
+  width: 100%;
+  border: 1px solid #666;
+  border-left: none;
+}
+
+.addon {
+  background-color: #ddd;
+  border: 1px solid #666;
+  border-right: none;
+  padding: 0.8rem 1.5rem 1rem;
+}
+
+.error {
+  color: #333;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #f8d7da;
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+/* Media query */
+
+@media (min-width: 700px) {
+  :root {
+    --type-scale: 1.35;
+  }
+
+  .container {
+    max-width: 675px;
+  }
+}
+
+@media (min-width: 980px) {
+  :root {
+    --type-scale: 1.45;
+  }
+
+  .container {
+    max-width: 955px;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .error {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --type-scale: 1.6;
+  }
+
+  .container {
+    max-width: 1100px;
+  }
+}

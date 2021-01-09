@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Calculator</title>
+
+  <!--------------------- Custom ---------------->
+  <link rel="stylesheet" href="Asset/CSS/style.css">
+
+</head>
+<body>
+  
+  <div class="container">
+
+    <header>
+      <h1 class="h1">Loan Calculator</h1>
+    </header>
+
+    <div class="card">
+      <div class="card-body">
+        <form id="loan-form">
+          <div class="form-group">
+            <span class="icon">&dollar;</span>
+            <label for="amount">
+              <input type="text" placeholder="Loan Amount" name="amount" id="amountInput">
+            </label>
+          </div>
+          <div class="form-group">
+            <span class="icon">&percnt;</span>
+            <label for="interest">
+              <input type="number" placeholder="Interest" name="interest" id="interestInput">
+            </label>
+          </div>
+          <div class="form-group form-group-last">
+            <label for="period">
+              <input type="number" class="form-control" placeholder="Years To Repay" name="period" id="periodInput">
+            </label>
+          </div>
+
+          <input type="submit" class="btn btn-dark" value="Calculate">
+        </form>
+      </div>
+
+      <div class="loading">
+        <img src="Asset/img/loading.gif" class="loader" alt="Loader">
+      </div>
+
+      <div class="card-footer">
+        <header>
+          <h2 class="h2 result">Result</h2>
+        </header>
+        <div class="custom">
+          <div class="form-custom-group">
+            <span class="addon">Monthly payment</span>
+            <input id="monthly-payment" class="output-item" disabled>
+          </div>
+          <div class="form-custom-group">
+            <span class="addon">Total Payment</span>
+            <input id="total-payment" class="output-item" disabled>
+            </div>
+          <div class="form-custom-group">
+            <span class="addon">Total interest</span>
+            <input id="total-interest" class="output-item" disabled>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>       
+  
+  <!-------------- Main Javascript ---------------->
+  <script src="Asset/JS/app.js"></script>
+
+</body>
+</html>
